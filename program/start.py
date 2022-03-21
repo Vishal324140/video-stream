@@ -96,7 +96,7 @@ async def start_(c: Client, message: Message):
                 [
                     InlineKeyboardButton("➕ 𝗔𝗱𝗱 𝗺𝗲 𝘁𝗼 𝗮 𝗚𝗿𝗼𝘂𝗽 ➕", url=f"https://t.me/{me_bot.username}?startgroup=true")
                 ],[
-                    InlineKeyboardButton("❓ Basic Guide", callback_data="user_guide")
+                    InlineKeyboardButton("❓ 𝗕𝗮𝘀𝗶𝗰 𝗚𝘂𝗶𝗱𝗲", callback_data="user_guide")
                 ],[
                     InlineKeyboardButton("📚 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀", callback_data="command_list"),
                     InlineKeyboardButton("👑 𝗢𝘄𝗻𝗲𝗿", url=f"https://t.me/{OWNER_USERNAME}")
