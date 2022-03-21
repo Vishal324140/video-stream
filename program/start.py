@@ -94,17 +94,17 @@ async def start_(c: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("➕ Add me to a Group ➕", url=f"https://t.me/{me_bot.username}?startgroup=true")
+                    InlineKeyboardButton("➕ 𝗔𝗱𝗱 𝗺𝗲 𝘁𝗼 𝗮 𝗚𝗿𝗼𝘂𝗽 ➕", url=f"https://t.me/{me_bot.username}?startgroup=true")
                 ],[
                     InlineKeyboardButton("❓ Basic Guide", callback_data="user_guide")
                 ],[
-                    InlineKeyboardButton("📚 Commands", callback_data="command_list"),
-                    InlineKeyboardButton("❤️ Donate", url=f"https://t.me/{OWNER_USERNAME}")
+                    InlineKeyboardButton("📚 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀", callback_data="command_list"),
+                    InlineKeyboardButton("👑 𝗢𝘄𝗻𝗲𝗿", url=f"https://t.me/{OWNER_USERNAME}")
                 ],[
-                    InlineKeyboardButton("👥 Support Group", url=f"https://t.me/{GROUP_SUPPORT}"),
-                    InlineKeyboardButton("📣 Support Channel", url=f"https://t.me/{UPDATES_CHANNEL}")
+                    InlineKeyboardButton("👥 𝗦𝘂𝗽𝗽𝗼𝗿𝘁 𝗚𝗿𝗼𝘂𝗽", url=f"https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton("📣 𝗦𝘂𝗽𝗽𝗼𝗿𝘁 𝗖𝗵𝗮𝗻𝗻𝗲𝗹", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],[
-                    InlineKeyboardButton("🌐 Source Code", url="https://github.com/levina-lab/video-stream")
+                    InlineKeyboardButton("❤️ 𝗰𝗿𝗲𝗮𝘁𝗼𝗿", url=f"https://t.me/VISHU_OFFLINE")
                 ],
             ]
         ),
@@ -124,14 +124,14 @@ async def alive(c: Client, message: Message):
     buttons = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("✨ Group", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("✨ 𝗚𝗿𝗼𝘂𝗽", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "📣 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "📣 𝗖𝗵𝗮𝗻𝗻𝗲𝗹", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ]
         ]
     )
-    text = f"**Hello {message.from_user.mention()}, I'm {me_bot.first_name}**\n\n🧑🏼‍💻 My Master: [{ALIVE_NAME}](https://t.me/{OWNER_USERNAME})\n👾 Bot Version: `v{__version__}`\n🔥 Pyrogram Version: `{pyrover}`\n🐍 Python Version: `{__python_version__}`\n✨ PyTgCalls Version: `{pytover.__version__}`\n🆙 Uptime Status: `{uptime}`\n\n❤ **Thanks for Adding me here, for playing video & music on your Group's video chat**"
+    text = f"**Hello {message.from_user.mention()}, I'm {me_bot.first_name}**\n\n🧑🏼‍💻 𝗠𝘆 𝗼𝘄𝗻𝗲𝗿: [{ALIVE_NAME}](https://t.me/{OWNER_USERNAME})\n👾 𝗯𝗼𝘁 𝘃𝗲𝗿𝘀𝗶𝗼𝗻: `v{__version__}`\n🔥 𝗣𝘆𝗿𝗼𝗴𝗿𝗮𝗺 𝗩𝗲𝗿𝘀𝗶𝗼𝗻: `{pyrover}`\n🐍 𝗣𝘆𝘁𝗵𝗼𝗻 𝗩𝗲𝗿𝘀𝗶𝗼𝗻: `{__python_version__}`\n✨ 𝗣𝘆𝗧𝗴𝗖𝗮𝗹𝗹𝘀 𝗩𝗲𝗿𝘀𝗶𝗼𝗻: `{pytover.__version__}`\n🆙 𝗨𝗽𝘁𝗶𝗺𝗲 𝗦𝘁𝗮𝘁𝘂𝘀: `{uptime}`\n\n❤ **Thanks for Adding me here, for playing video & music on your Group's video chat**"
     await c.send_photo(
         chat_id,
         photo=f"{ALIVE_IMG}",
@@ -146,7 +146,7 @@ async def ping_pong(c: Client, message: Message):
     start = time()
     m_reply = await message.reply_text("pinging...")
     delta_ping = time() - start
-    await m_reply.edit_text("🏓 PONG !\n" f"⏱ `{delta_ping * 1000:.3f} ms`")
+    await m_reply.edit_text("🏓 𝗣𝗢𝗡𝗚 !\n" f"⏱ `{delta_ping * 1000:.3f} ms`")
 
 
 @Client.on_message(command(["uptime", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)
@@ -195,10 +195,10 @@ async def new_chat(c: Client, m: Message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("📣 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"),
-                                InlineKeyboardButton("💭 Support", url=f"https://t.me/{GROUP_SUPPORT}")
+                                InlineKeyboardButton("📣 𝗖𝗵𝗮𝗻𝗻𝗲𝗹", url=f"https://t.me/{UPDATES_CHANNEL}"),
+                                InlineKeyboardButton("💭 𝗦𝘂𝗽𝗽𝗼𝗿𝘁", url=f"https://t.me/{GROUP_SUPPORT}")
                             ],[
-                                InlineKeyboardButton("👤 Assistant", url=f"https://t.me/{me_user.username}")
+                                InlineKeyboardButton("👤 𝗔𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁", url=f"https://t.me/{me_user.username}")
                             ]
                         ]
                     )
