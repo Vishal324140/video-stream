@@ -73,7 +73,7 @@ async def stop(client, m: Message):
             await calls.leave_group_call(chat_id)
             await remove_active_chat(chat_id)
             clear_queue(chat_id)
-            await m.reply_text("✅ The userbot has disconnected from the video chat.")
+            await m.reply_text("✅ 𝗧𝗵𝗲 𝘂𝘀𝗲𝗿𝗯𝗼𝘁 𝗵𝗮𝘀 𝗱𝗶𝘀𝗰𝗼𝗻𝗻𝗲𝗰𝘁𝗲𝗱 𝗳𝗿𝗼𝗺 𝘁𝗵𝗲 𝘃𝗶𝗱𝗲𝗼 𝗰𝗵𝗮𝘁.")
         except Exception as e:
             traceback.print_exc()
             await m.reply_text(f"🚫 **error:**\n\n`{e}`")
